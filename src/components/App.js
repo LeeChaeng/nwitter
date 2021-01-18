@@ -20,7 +20,6 @@ function App() {
       ) : (
         "Intialiizng..."
       )}
-      <footer>&copy; {new Date().getFullYear()}Nwitter </footer>
     </>
   );
 }
