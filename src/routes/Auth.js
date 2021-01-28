@@ -5,7 +5,6 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [newAccount, setNewAccount] = useState(true);
-  const [error, setError] = useState("");
   const onChange = (event) => {
     const {
       target: { name, value },
@@ -19,22 +18,13 @@ const Auth = () => {
   };
   const onSubmit = async (event) => {
     event.preventDefault();
-    try {
-      let data;
-      if (newAccount) {
-        //create account
-        data = await authService.createUserWithEmailAndPassword(
-          email,
-          password
-        );
-      } else {
-        //log in
-        data = await authService.signInWithEmailAndPassword(email, password);
-      }
-
-      console.log(data);
-    } catch (error) {
-      console.log(error.message);
+    let data;
+    if (newAccount) {
+      //create account
+      data = await authService.createUserWithEmailAndPassword(email, password);
+    } else {
+      //log in
+      data = await authService.signInWithEmailAndPassword(email, password);
     }
   };
 
@@ -51,7 +41,7 @@ const Auth = () => {
     } else if (name === "github") {
       provider = new firebaseInstance.auth.GithubAuthProvider();
     }
-    const data = await authService.signInWithPopup(provider);
+    await authService.signInWithPopup(provider);
   };
   return (
     <div>
@@ -76,7 +66,6 @@ const Auth = () => {
           type="submit"
           value={newAccount ? "Create Account" : "Sign in"}
         />
-        {error}
       </form>
       <span onClick={toggleAccount}>
         {newAccount ? "Sign in" : "Create Account"}
