@@ -9,4 +9,8 @@
 
 ![image](https://user-images.githubusercontent.com/52696993/106436299-48511c00-64b7-11eb-9273-62ca91bce12d.png)
 
-- 트윗 가져오기,수정하기, 삭제하기, 사진 업로드하기
+- 트윗 가져오기,수정하기, 삭제하기, 사진 업로드하기 구현
+
+![image](https://user-images.githubusercontent.com/52696993/106436498-7fbfc880-64b7-11eb-87fb-a16cba35b3cb.png)
+
+- 내 프로필 수정하기 & 로그아웃 구현
