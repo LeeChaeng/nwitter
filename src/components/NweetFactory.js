@@ -132,6 +132,7 @@ const FactoryInputContainer = styled.div`
     text-align: center;
     border-radius: 20px;
     color: white;
+    box-sizing: border-box;
   }
 `;
 

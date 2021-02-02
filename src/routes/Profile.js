@@ -75,6 +75,7 @@ const FormInput = styled.input`
   text-align: center;
   background-color: white;
   color: black;
+  box-sizing: border-box;
 `;
 
 const FormBtn = styled.input`
